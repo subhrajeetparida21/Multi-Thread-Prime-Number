@@ -1,0 +1,8 @@
+Model Used: Gemini 2.0 Flash
+
+Prompt Used:
+"Write a C program using fork(), open(), write(), wait() to compute prime numbers
+in a given range using multiple child processes and measure execution time."
+
+Approximate Tokens Used:
+~900 tokens
