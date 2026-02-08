@@ -2,8 +2,6 @@
 
 This folder contains our submission for the OS Assignment 1 (Parallel Prime Generator).
 
-See `OBSERVATIONS.md` for performance analysis across different machines.
-
 There are two folders:
 
 1. **FASTprime MAN**: 
