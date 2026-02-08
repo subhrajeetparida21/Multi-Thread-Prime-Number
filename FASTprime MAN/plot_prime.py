@@ -17,7 +17,7 @@ def main():
     try:
         with open(data_file, 'r') as csvfile:
             reader = csv.reader(csvfile)
-            header = next(reader, None)
+            header = next(reader, None) # Skip header if present
             for row in reader:
                 if len(row) >= 2:
                     try:
@@ -35,22 +35,12 @@ def main():
         print("No valid data found in CSV.")
         sys.exit(1)
 
-    if len(sys.argv) > 3:
-        plot_title = sys.argv[3]
-    else:
-        plot_title = "FASTprime: n vs Execution Time (Ankit's System)"
-
-    #... (omitted)
-
     plt.figure(figsize=(10, 6))
     plt.plot(n_values, time_values, marker='o', linestyle='-', color='b')
     plt.xlabel("Number of Child Processes (n)")
     plt.ylabel("Execution Time (microseconds)")
-    plt.title(plot_title)
-    if "Ankit's System" in plot_title:
-        plt.suptitle("Performance analysis on Ankit's machine", fontsize=10)
-    else:
-        plt.suptitle(f"Performance Analysis: {plot_title}", fontsize=10)
+    plt.title(f"FASTprime: n vs Execution Time (Ankit's System)")
+    plt.suptitle("Performance analysis on Ankit's machine", fontsize=10)
     plt.grid(True)
     
     # Annotate points
